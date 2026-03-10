@@ -10,6 +10,16 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module">
+      const isLocalDevHost =
+        location.hostname === "localhost" ||
+        location.hostname === "127.0.0.1";
+
+      if (isLocalDevHost) {
+        import("./src/main.jsx");
+      } else {
+        location.replace(new URL("./site/", location.href));
+      }
+    </script>
   </body>
   </html>
