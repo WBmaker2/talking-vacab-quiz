@@ -8,12 +8,11 @@
 ## Build
 
 - `npm run build`
-- `npm run build:site`
 - `npm run preview`
 
-## GitHub Pages
+## Deployment
 
-This repo currently works with GitHub Pages serving the `main` branch root.
+This project is deployed with Vercel.
 
-- The repository root redirects production traffic to `./site/`
-- Run `npm run build:site` before pushing when you want to refresh the published Pages build
+- Primary live URL: `talking-vacab-quiz.vercel.app`
+- Preferred workflow: code change -> `npm run build` -> git commit -> git push -> Vercel deploy
